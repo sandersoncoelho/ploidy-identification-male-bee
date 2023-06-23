@@ -1,0 +1,43 @@
+{'diploide': 0, 'haploide': 1}
+-----
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 62, 62, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 31, 31, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 29, 29, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 14, 14, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 6272)              0         
+                                                                 
+ dense (Dense)               (None, 3137)              19678401  
+                                                                 
+ dense_1 (Dense)             (None, 3137)              9843906   
+                                                                 
+ dense_2 (Dense)             (None, 2)                 6276      
+                                                                 
+=================================================================
+Total params: 29,538,727
+Trainable params: 29,538,727
+Non-trainable params: 0
+-----
+Epoch 100/100
+6/6 [==============================] - 4s 650ms/step - loss: 0.2244 - accuracy: 0.9061
+-----
+accuracy_score(dataset_teste.classes, previsoes)
+0.6
+-----
+              precision    recall  f1-score   support
+
+           0       0.42      0.47      0.44        17
+           1       0.65      0.61      0.63        28
+
+    accuracy                           0.56        45
+   macro avg       0.54      0.54      0.54        45
+weighted avg       0.57      0.56      0.56        45
